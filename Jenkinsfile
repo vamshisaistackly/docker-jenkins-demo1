@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/vamshisaistackly/docker-jenkins-demo.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 bat 'docker build -t website:v1 .'
